@@ -9,6 +9,8 @@ const useStyles = makeStyles({
         textAlign:"center",
     },
     imageContent:{
+        maxHeight:"800px",
+        maxWidth:"800px",
         display:"block",
         margin:"auto"
     },
