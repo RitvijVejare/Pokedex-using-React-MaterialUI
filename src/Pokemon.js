@@ -1,5 +1,4 @@
 import React,{useState, useEffect} from 'react';
-import MockData from "./MockData";
 import { Typography, makeStyles, CircularProgress, Button } from '@material-ui/core';
 import axios from "axios";
 
@@ -42,7 +41,7 @@ const Pokemon = (props) => {
                 setPokemon(false);
                 console.log(err);
             });
-    }, [props.match.params.pokemonID])
+    }, [props.match.params.pokemonId])
 
 
     const generatePokemon=()=>{
@@ -52,9 +51,9 @@ const Pokemon = (props) => {
                 {/* {console.log(sprites.front_default)} */}
                 <Typography className={classes.h1Content} variant="h1">
                     {`${id}. ${name}`}
-                    <img src={sprites.front_shiny}/>
+                    <img src={sprites.front_shiny} alt=""/>
                 </Typography>
-                <img src={`https://pokeres.bastionbot.org/images/pokemon/${id}.png`} className={classes.imageContent} />
+                <img src={`https://pokeres.bastionbot.org/images/pokemon/${id}.png`} className={classes.imageContent} alt="" />
                 <Typography variant="h3" className={classes.h1Content}>Pokemon Info</Typography>
                 <Typography className={classes.h1Content}>
                     {"Species: "}
